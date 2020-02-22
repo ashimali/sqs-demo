@@ -1,11 +1,18 @@
 #### Toy Spring cloud messaging and Localstack integration test example
 
+1. Create a .env file with the following contents:
 
-1. In one terminal run localstack in docker container
+    ```
+    AWS_ACCESS_KEY=notreal
+    AWS_SECRET_ACCESS_KEY=alsonotreal
+    SQS_END_POINT=http://localhost:4576/queue/demo-messages
+   ```
+
+2. In one terminal run localstack in docker container
    
    ```make run-localstack```
    
-2. In another terminal run the tests
+3. In another terminal run the tests
    
    ```make integration-test```  
      
